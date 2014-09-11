@@ -9,6 +9,8 @@
 #import "FIXOuterSpaceTableViewController.h"
 #import "AstronomicalData.h"
 #import "FIXSpaceObject.h"
+#import "FIXSpaceImageViewController.h"
+#import "FIXSpaceDataViewController.h"
 
 @interface FIXOuterSpaceTableViewController ()
 
@@ -44,8 +46,8 @@
         NSString *imageName = [NSString stringWithFormat:@"%@.jpg", planetData[PLANET_NAME]];
         FIXSpaceObject *planet = [[FIXSpaceObject alloc]initWithData:planetData andImage:[UIImage imageNamed:imageName]];
         [self.planets addObject:planet];
+        
     }
-    
     
 //    NSMutableDictionary * myDictionary = [[NSMutableDictionary alloc]init];
 //    NSString *firstColor = @"red";
@@ -56,11 +58,26 @@
 //    
 //    NSString *blueString = [myDictionary objectForKey:@"ocean color"];
     
-    NSNumber *myNumber = [NSNumber numberWithInt:5];
-    NSLog(@"%@", myNumber);
-    NSNumber *floatNumber = [NSNumber numberWithFloat:3.14];
-    NSLog(@"%@", floatNumber);
-    
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([sender isKindOfClass:[UITableViewCell class]]) {
+        if ([segue.destinationViewController isKindOfClass:[FIXSpaceImageViewController class]]) {
+            FIXSpaceImageViewController *nextViewController = segue.destinationViewController;
+            NSIndexPath *path = [self.tableView indexPathForCell:sender];
+            FIXSpaceObject *selectedObject = self.planets[path.row];
+            nextViewController.spaceObject = selectedObject;
+        }
+    }
+    if ([sender isKindOfClass:[NSIndexPath class]]) {
+        if ([segue.destinationViewController isKindOfClass:[FIXSpaceDataViewController class]]) {
+            FIXSpaceDataViewController *targetViewController = segue.destinationViewController;
+            NSIndexPath *path = sender;
+            FIXSpaceObject *selectedObject = self.planets[path.row];
+            targetViewController.spaceObject = selectedObject;
+        }
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -103,6 +120,13 @@
     cell.detailTextLabel.textColor = [UIColor colorWithWhite:0.5 alpha:1.0];
     
     return cell;
+}
+
+#pragma mark UITableView Delegate
+
+-(void)tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath
+{
+    [self performSegueWithIdentifier:@"push to space data" sender:indexPath];
 }
 
 

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0545187D19C08C6200ED1837 /* FIXSpaceDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0545187C19C08C6200ED1837 /* FIXSpaceDataViewController.m */; };
 		0575D79719BF556C003BA404 /* FIXSpaceImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0575D79619BF556C003BA404 /* FIXSpaceImageViewController.m */; };
 		05C9D6E119BC9E6B007E3685 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05C9D6E019BC9E6B007E3685 /* Foundation.framework */; };
 		05C9D6E319BC9E6B007E3685 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05C9D6E219BC9E6B007E3685 /* CoreGraphics.framework */; };
@@ -47,6 +48,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0545187B19C08C6200ED1837 /* FIXSpaceDataViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FIXSpaceDataViewController.h; sourceTree = "<group>"; };
+		0545187C19C08C6200ED1837 /* FIXSpaceDataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FIXSpaceDataViewController.m; sourceTree = "<group>"; };
 		0575D79519BF556C003BA404 /* FIXSpaceImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FIXSpaceImageViewController.h; sourceTree = "<group>"; };
 		0575D79619BF556C003BA404 /* FIXSpaceImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FIXSpaceImageViewController.m; sourceTree = "<group>"; };
 		05C9D6DD19BC9E6B007E3685 /* Out of this World.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Out of this World.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -144,6 +147,8 @@
 				05C9D6EF19BC9E6B007E3685 /* FIXAppDelegate.h */,
 				05C9D6F019BC9E6B007E3685 /* FIXAppDelegate.m */,
 				05C9D6F219BC9E6B007E3685 /* Main.storyboard */,
+				0545187B19C08C6200ED1837 /* FIXSpaceDataViewController.h */,
+				0545187C19C08C6200ED1837 /* FIXSpaceDataViewController.m */,
 				05C9D71519BC9F26007E3685 /* FIXOuterSpaceTableViewController.h */,
 				05C9D71619BC9F26007E3685 /* FIXOuterSpaceTableViewController.m */,
 				0575D79519BF556C003BA404 /* FIXSpaceImageViewController.h */,
@@ -305,6 +310,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0545187D19C08C6200ED1837 /* FIXSpaceDataViewController.m in Sources */,
 				05C9D71719BC9F26007E3685 /* FIXOuterSpaceTableViewController.m in Sources */,
 				0575D79719BF556C003BA404 /* FIXSpaceImageViewController.m in Sources */,
 				05C9D6F119BC9E6B007E3685 /* FIXAppDelegate.m in Sources */,
